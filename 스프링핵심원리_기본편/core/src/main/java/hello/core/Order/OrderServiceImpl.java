@@ -9,7 +9,8 @@ import hello.core.Member.MemoryMemberRepository;
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberREpository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    //private final DiscountPolicy discountPolicy = new FixDiscountPolicy(); -> DIP를 위반하므로 주석 처리
+    private DiscountPolicy discountPolicy;
 
     /**
      * 주문 생성 서비스
