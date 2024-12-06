@@ -11,7 +11,11 @@ public class MemberApp {
      * @param args
      */
     public static void main(String[] args){
-        MemberService memberService = new MemberServiceImpl();
+
+        Appconfig appconfig = new Appconfig();
+        MemberService memberService = appconfig.memberService();
+        //MemberService memberService = new MemberServiceImpl();
+
         Member member = new Member(1L,"memberA", Grade.VIP);
         memberService.join(member);
 
