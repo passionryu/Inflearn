@@ -2,7 +2,7 @@ package hello.core.Member;
 
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository = new MemberMemberRepository();
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     /**
      * 회원 가입 메서드
